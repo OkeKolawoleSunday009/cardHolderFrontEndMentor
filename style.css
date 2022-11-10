@@ -1,0 +1,237 @@
+.container{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    gap: 8px;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+label{
+    font-weight: 700;
+    font-size: 13px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+}
+.flames{
+    background: url(./images/bg-main-desktop.png);
+    flex: 35%;
+    position: relative;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.water{
+    background: white;
+    flex: 65%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* align-items: center; */
+    width: 55%;
+    gap: 20px;
+    
+}
+.holder_name{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+
+.expiration_card{
+    display: flex;
+}
+.date > input{
+    width: 40%;
+    border-radius: 5px;
+    height: 30px;
+    border: none;
+    box-shadow: 5px 5px 5px 3px  rgb(227, 227, 227);
+}
+.box_01, .box_02{
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+.box_02 > input{
+    border-radius: 5px;
+    height: 30px;
+    border: none;
+    box-shadow: 5px 5px 5px 3px  rgb(227, 227, 227);
+
+}
+.code{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.input_card{
+    width: 100%;
+    border-radius: 10px;
+    height: 50px;
+    border: none;
+    box-shadow: 5px 5px 5px 3px  rgb(227, 227, 227);
+}
+#submit{
+    width: 100%;
+    border-radius: 10px;
+    height: 50px;
+    border: none;
+    background-color: rgb(161, 6, 161);
+    box-shadow: 3px 3px 3px 3px  rgb(227, 227, 227);
+    color: white;
+    font-weight: 700;
+    font-size: 15px;
+}
+.card{
+    width: 100%;
+   
+}
+.back_card{
+    position: absolute;
+   top: 20%;
+   left: 10%;
+
+}
+.front_card{
+    position: absolute;
+    top: 50%;
+    left: 20%;
+
+}
+::placeholder{
+    color:  rgb(155, 153, 153);
+    padding-left: 10px;
+}
+.card{
+    color: white;
+    font-size: 15px;
+}
+
+.card_01{
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: contain;
+    background-size: no-repeat;
+    width: 100%;
+    height: 170px;
+    background-image: url(./images/bg-card-back.png);
+}
+
+.card_02{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+    background-size: contain;
+    background-size: no-repeat;
+    width: 100%;
+    height: 170px;
+    background-image: url(./images/bg-card-front.png);
+}
+#card_number{
+    width: 100%;
+    /* background-color: red; */
+    letter-spacing: 5px;
+    font-size: 20px;
+    text-align: center;
+}
+#card_name{
+    background-color: pink;
+
+}
+#card_month{
+    background-color: red;
+    text-align: right;    
+}
+
+#card_cvc{
+    text-align: center  ;
+    
+}
+.logo{
+    background-image: url(./images/favicon-32x32.png);
+    background-size: contain;
+    background-size: no-repeat;
+    width: 50px;
+    height: 50px;
+    border-radius: 30px;
+}
+.ring{
+    background-image: url(./images/card-logo.svg);
+    background-size: contain;
+    background-size: no-repeat;
+    width: 25px;
+    height: 25px;
+    border-radius: 30px;
+
+}
+.logo_container{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.name_container{
+    background-color: blue;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+}
+@media screen and (max-width : 800px){
+    .container{
+        flex-direction: column;
+        /* background-color: red; */
+    }
+    /* body{
+        width: 100%;
+        height: 100vh;
+
+    } */
+    form{
+        width: 70%;
+    }
+    .expiration_card{
+        align-items: center;
+    }
+    label{
+        font-size: 12px;
+    }
+    .water{
+        padding-bottom: 20px;
+        
+    }
+    .card{
+        width: 60%;
+    }
+    .back_card{
+       position: absolute;
+       top: 50%;
+       z-index: 1000;
+       
+    
+    }
+    .front_card{
+        position: absolute;
+        top: 10%;
+        right: 0%;
+        
+    
+    }
+    .flames{
+        padding-top: 70px;
+        padding-bottom: 60px;
+    }
+}

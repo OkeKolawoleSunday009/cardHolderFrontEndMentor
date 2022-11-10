@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Interactive card details form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+
+ 
+</head>
+<body>
+  
+<!-- 
+  0000 0000 0000 0000
+  Jane Appleseed
+  00/00
+
+  000
+
+  Cardholder Name
+  e.g. Jane Appleseed
+
+  Card Number
+  e.g. 1234 5678 9123 0000
+
+  Exp. Date (MM/YY)
+  MM
+  YY
+
+  CVC
+  e.g. 123
+
+  Confirm -->
+
+  <!-- Completed state start -->
+
+  <div class="container">
+    <div class="flames">
+      <div class="card_01">
+        <!-- <img class="card back_card" src="./images/bg-card-front.png" alt=""> -->
+        <div id="card_cvc" class="card">12jjjjjjjjjjjjjjjj32</div>
+
+      
+      </div>
+      <div class="card_02">
+        <!-- <img class="card front_card" src="./images/bg-card-back.png" alt=""> -->
+        <div class="logo_container">
+          <div class="logo"></div>
+          <div class="ring"></div>
+
+        </div>
+    
+        <div  class="card"><p id="card_number" >123 456 67755 0000</p></div>
+
+        <div class="name_container">
+          
+        <div  class="card"><p id="card_name">oke </p></div>
+        <div  class="card"><p id="card_month">02/22</p></div>
+        <!-- <div  class="card"><p id="card_date">22</p></div> -->
+
+        </div>
+
+      </div>
+    </div>
+
+    <div class="water">
+      <form action="">
+        <div class="holder_name">
+          <div class="code">
+            <label for="name">CARD HOLDER NAME</label>
+            <input type="text" class="input_card" name="" id="name" placeholder="e.g Oke Kolawole">
+          </div>
+          <div class="code">
+            <label for="name">CARD HOLDER NUMBER</label>
+            <input type="text" class="input_card" name="" id="number"  placeholder="e.g 1234 5875 4322 3333">
+          </div>
+          
+        </div>
+
+        <div class="expiration_card">
+          <div class="box_01">
+            <label for="">EXP. DATE (MM/YY)</label>
+            <div class="date">
+              <input type="text" name="" id="month"  placeholder="MM">
+              <input type="text" name="" id="date" placeholder="YY">
+            </div>
+            
+          </div>
+
+          <div class="box_02">
+            <label for="">CVC</label>
+            <input type="text" name="" id="cvc"  placeholder="e.g 123">
+          </div>
+        </div>
+
+        <div class="submit">
+          <input type="submit" value="Submit" name="" id="submit">
+        </div>
+
+      </form>
+    </div>
+  </div>
+
+  <!-- Thank you!
+  We've added your card details
+  Continue
+   -->
+  <!-- <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div> -->
+  <script src="script.js"></script>
+
+</body>
+
+</html>
