@@ -9,6 +9,9 @@
     margin: 0;
     padding: 0;
 }
+input{
+    overflow: hidden;
+}
 label{
     font-weight: 700;
     font-size: 13px;
@@ -19,6 +22,7 @@ body{
     height: 100vh;
 }
 .flames{
+    justify-content: center;
     align-items: center;
     background: url(./images/bg-main-desktop.png);
     flex: 35%;
@@ -99,6 +103,7 @@ form{
     font-size: 15px;
 }
 .card{
+    overflow: hidden;
     width: 100%;
    
 }
@@ -152,19 +157,22 @@ form{
     letter-spacing: 5px;
     font-size: 20px;
     text-align: center;
+    overflow: hidden;
 }
 #card_name{
     /* background-color: pink; */
+    overflow: hidden;
 
 }
 #card_month{
     background-color: red;
     text-align: right;    
+    overflow: hidden;
 }
 
 #card_cvc{
     text-align: center  ;
-    
+    overflow: hidden;
 }
 .logo{
     background-image: url(./images/favicon-32x32.png);
