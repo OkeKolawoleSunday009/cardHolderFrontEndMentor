@@ -11,6 +11,7 @@
 }
 input{
     overflow: hidden;
+    outline:none;
 }
 label{
     font-weight: 700;
@@ -102,12 +103,8 @@ form{
     font-weight: 700;
     font-size: 15px;
 }
-.card{
-    overflow: hidden;
-    width: 100%;
-   
-}
-.back_card{
+
+/* .back_card{
     position: absolute;
    top: 20%;
    left: 10%;
@@ -118,10 +115,15 @@ form{
     top: 50%;
     left: 20%;
 
-}
+} */
 ::placeholder{
     color:  rgb(155, 153, 153);
     padding-left: 10px;
+}
+.card{
+    overflow: hidden;
+    width: 100%;
+   
 }
 .card{
     color: white;
@@ -165,7 +167,7 @@ form{
 
 }
 #card_month{
-    background-color: red;
+    /* background-color: red; */
     text-align: right;    
     overflow: hidden;
 }
@@ -195,9 +197,10 @@ form{
     display: flex;
     align-items: center;
     gap: 10px;
+    margin-bottom: 20px;
 }
 .name_container{
-    background-color: blue;
+    /* background-color: blue; */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -213,7 +216,7 @@ form{
 
     } */
     form{
-        width: 70%;
+        width: 90%;
     }
     .expiration_card{
         align-items: center;
@@ -242,11 +245,24 @@ form{
         
     
     } */
+    .card_01, .card_02{
+        width: 70%;
+    }
     .flames{
-        padding-top: 70px;
-        padding-bottom: 60px;
+        justify-content: center;
+        align-items: center;;
     }
     .name_container{
-        width: 65%;
+        width: 100%;
+        
+
     }
+    #card_number{
+        width: 100%;
+        /* background-color: red; */
+        letter-spacing: 5px;
+        font-size: 20px;
+        text-align: center;
+    }
+
 }

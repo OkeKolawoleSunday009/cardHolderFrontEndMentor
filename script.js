@@ -1,3 +1,5 @@
+const { ResetTv } = require("@mui/icons-material");
+
  // select the form when submited button is clicked
 var form = document.querySelector("#submit");
 
@@ -16,11 +18,33 @@ var form = document.querySelector("#submit");
   document.getElementById("card_cvc").innerHTML ="e.g 123";
 
 
-// first input
+
+  function visible (op, p2){
+    if(op.value != ""){
+      console.log("Not empty");
+      // form.style.opacity ="initial";
+      op.style.cssText= 'outline:2px solid green';
+      
+    }else{
+      named.style.cssText= 'outline:2px solid red';
+
+    }
+    
+  } 
+
+// first input https://www.makeuseof.com/regular-expressions-form-validation-html-javascript/
 named.addEventListener("keyup", function(e){
     var dataOne = e.target.value;
     console.log(dataOne);
+    var nameRGEX = /^[a-zA-Z]+$/;
+    var nameResult = nameRGEX.test(dataOne);
+    if (nameResult){
+      console.log(dataOne);
+    }else{
 
+      named.style.cssText= 'outline:2px solid red';
+    }
+   
     // update it in the ui
     document.getElementById('card_name').innerHTML = dataOne;
 
@@ -61,9 +85,21 @@ cvc.addEventListener("keyup", function(e){
 
 });
 
+
+
+
     form.addEventListener("click", function(){
+
+
+    // function validate()
+// {
+  // var phoneNumber = document.getElementById('phone-number').value;
+  // var phoneRGEX = /^[(]{0,1}[0-9]{3}[)]{0,1}[-\s\.]{0,1}[0-9]{3}[-\s\.]{0,1}[0-9]{4}$/;
+  // var phoneResult = phoneRGEX.test(phoneNumber);
+  // alert("phone:"+phoneResult );
+// }
     
-    console.log("resdy");
+    // console.log("resdy");
   });
 
 
