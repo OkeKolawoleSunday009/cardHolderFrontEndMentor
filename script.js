@@ -33,17 +33,16 @@ var form = document.querySelector("#submit");
   // } 
 
 // first input https://www.makeuseof.com/regular-expressions-form-validation-html-javascript/
-
+ 7
 // changeDisplay(named, cardName);
 // changeDisplay(number, cardNumber);
 changeDisplay(month, cardMonth);
-changeDisplay(dated, cardCvc);
+changeDisplay(cvc, cardCvc);
 
 function changeDisplay(para1, para2){
   para1.addEventListener("keyup", function(e){
     var dataValue = e.target.value;
-    var  UpperCase =  dataValue; 
-    para2.innerHTML = UpperCase;                                                                                                                    
+    para2.innerHTML = dataValue                                                                                                                   
   });
 
 };
@@ -53,7 +52,7 @@ named.addEventListener("keyup", function(e){
 //     console.log(dataOne);
    var nameRGEX = /^[a-zA-Z ]+$/;
    var nameResult = nameRGEX.test(dataValue);
-   if (nameResult){
+   if (nameResult || nameResult == 25){
     named.style.cssText= 'initial';
     
   }else{
