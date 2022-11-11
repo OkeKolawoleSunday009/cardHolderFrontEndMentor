@@ -10,6 +10,7 @@
     padding: 0;
 }
 input{
+    padding: 10px 0 !important; 
     overflow: hidden;
     outline:none;
 }
@@ -197,7 +198,7 @@ form{
     display: flex;
     align-items: center;
     gap: 10px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 .name_container{
     /* background-color: blue; */

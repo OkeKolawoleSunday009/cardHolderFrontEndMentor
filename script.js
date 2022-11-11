@@ -34,7 +34,7 @@ var form = document.querySelector("#submit");
 
 // first input https://www.makeuseof.com/regular-expressions-form-validation-html-javascript/
 
-changeDisplay(named, cardName);
+// changeDisplay(named, cardName);
 changeDisplay(number, cardNumber);
 changeDisplay(month, cardMonth);
 changeDisplay(dated, cardCvc);
@@ -46,25 +46,45 @@ function changeDisplay(para1, para2){
     para2.innerHTML = UpperCase;                                                                                                                    
   });
 
-}
-
-// named.addEventListener("keyup", function(e){
-//     var dataOne = e.target.value;
+};
+named.addEventListener("keyup", function(e){
+  var dataValue = e.target.value;
 //     console.log(dataOne);
-//     var nameRGEX = /^[a-zA-Z]+$/;
-//     var nameResult = nameRGEX.test(dataOne);
-//     if (nameResult){
-//       console.log(dataOne);
-//     }else{
+   var nameRGEX = /^[a-zA-Z]+$/;
+   var nameResult = nameRGEX.test(dataValue);
+   if (nameResult){
+    console.log(dataOne);
+  }else{
 
-//       named.style.cssText= 'outline:2px solid red';
-//     }
+    named.style.cssText= 'outline:2px solid red';
+  }
+
+// update it in the ui
+cardNumber.innerHTML = dataValue;
+
+
+});
+
+number.addEventListener("keyup", function(e){
+      var dataValue = e.target.value;
+//     console.log(dataOne);
+       var numberRGEX = /^[0-9]+$/;
+       var numberResult = numberRGEX.test(dataValue);
+       if (numberResult){
+      
+          console.log(numberResult);
+          
+          var newValue = dataValue.replace(/\B(?<!\.\d*)(?=(\d{3})+.(?!\d))/g, ' ');
+
+      }else{
+        named.style.cssText= 'outline:2px solid red';
+      }
    
-//     // update it in the ui
-//     document.getElementById('card_name').innerHTML = dataOne;
+    // update it in the ui
+    cardNumber.innerHTML = newValue;
 
 
-// });
+});
 
 
 
