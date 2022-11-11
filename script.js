@@ -1,4 +1,4 @@
-const { ResetTv } = require("@mui/icons-material");
+
 
  // select the form when submited button is clicked
 var form = document.querySelector("#submit");
@@ -12,79 +12,59 @@ var form = document.querySelector("#submit");
 
 
   // updatind the value when the input data is filed
-  document.getElementById('card_name').innerHTML = "oke kolawole ";
-  document.getElementById("card_number").innerHTML ="123 456 789"; 
-  document.getElementById("card_month").innerHTML = "02";
-  document.getElementById("card_cvc").innerHTML ="e.g 123";
+   var cardName =  document.getElementById('card_name');
+   var cardNumber = document.getElementById("card_number");
+   var cardMonth = document.getElementById("card_month");
+   var cardCvc = document.getElementById("card_cvc");
 
 
 
-  function visible (op, p2){
-    if(op.value != ""){
-      console.log("Not empty");
-      // form.style.opacity ="initial";
-      op.style.cssText= 'outline:2px solid green';
+  // function visible (op, p2){
+  //   if(op.value != ""){
+  //     console.log("Not empty");
+  //     // form.style.opacity ="initial";
+  //     op.style.cssText= 'outline:2px solid green';
       
-    }else{
-      named.style.cssText= 'outline:2px solid red';
+  //   }else{
+  //     named.style.cssText= 'outline:2px solid red';
 
-    }
+  //   }
     
-  } 
+  // } 
 
 // first input https://www.makeuseof.com/regular-expressions-form-validation-html-javascript/
-named.addEventListener("keyup", function(e){
-    var dataOne = e.target.value;
-    console.log(dataOne);
-    var nameRGEX = /^[a-zA-Z]+$/;
-    var nameResult = nameRGEX.test(dataOne);
-    if (nameResult){
-      console.log(dataOne);
-    }else{
 
-      named.style.cssText= 'outline:2px solid red';
-    }
+changeDisplay(named, cardName);
+changeDisplay(number, cardNumber);
+changeDisplay(month, cardMonth);
+changeDisplay(dated, cardCvc);
+
+function changeDisplay(para1, para2){
+  para1.addEventListener("keyup", function(e){
+    var dataValue = e.target.value;
+    var  UpperCase =  dataValue.toUpperCase();   
+    para2.innerHTML = UpperCase;                                                                                                                    
+  });
+
+}
+
+// named.addEventListener("keyup", function(e){
+//     var dataOne = e.target.value;
+//     console.log(dataOne);
+//     var nameRGEX = /^[a-zA-Z]+$/;
+//     var nameResult = nameRGEX.test(dataOne);
+//     if (nameResult){
+//       console.log(dataOne);
+//     }else{
+
+//       named.style.cssText= 'outline:2px solid red';
+//     }
    
-    // update it in the ui
-    document.getElementById('card_name').innerHTML = dataOne;
+//     // update it in the ui
+//     document.getElementById('card_name').innerHTML = dataOne;
 
 
-});
-
-// second  input
-number.addEventListener("keyup", function(e){
-  var dataTwo = e.target.value;
-  console.log(dataTwo);
-
-  // update it in the ui
-  document.getElementById('card_number').innerHTML = dataTwo;
-
-
-});
-// third  input
-month.addEventListener("keyup", function(e){
-  var dataThree = e.target.value;
-  console.log(dataThree);
-
-  // update it in the ui
-
-  document.getElementById('card_month').innerHTML = dataThree;
-
-
-});
-
-//  fifth input     
-cvc.addEventListener("keyup", function(e){
-  var dataFifth = e.target.value;
-  console.log(dataFifth);
-
-  // update it in the ui
-
-  document.getElementById('card_cvc').innerHTML = dataFifth;
-
-
-});
-
+// });
 
 
 
