@@ -7,7 +7,7 @@ var form = document.querySelector("#submit");
   var named = document.querySelector("#name");
   var number = document.querySelector("#number");
   var month = document.querySelector("#month");
-  var dated = document.querySelector("#date");
+  var years = document.querySelector("#year");
   var cvc = document.querySelector("#cvc");
 
 
@@ -15,6 +15,7 @@ var form = document.querySelector("#submit");
    var cardName =  document.getElementById('card_name');
    var cardNumber = document.getElementById("card_number");
    var cardMonth = document.getElementById("card_month");
+   var cardYear = document.getElementById("card_year");
    var cardCvc = document.getElementById("card_cvc");
 
 
@@ -37,12 +38,25 @@ var form = document.querySelector("#submit");
 // changeDisplay(named, cardName);
 // changeDisplay(number, cardNumber);
 changeDisplay(month, cardMonth);
+changeDisplay(years, cardYear);
 changeDisplay(cvc, cardCvc);
 
 function changeDisplay(para1, para2){
   para1.addEventListener("keyup", function(e){
     var dataValue = e.target.value;
-    para2.innerHTML = dataValue                                                                                                                   
+    var checkRGEX = /^[0-9]+$/;
+    var checkResult = checkRGEX.test(dataValue);
+    if(checkResult && dataValue != " " ){
+      
+     this.style.cssText = 'initial';
+    }else{
+      this.style.cssText= 'outline: 2px solid red';
+    }
+    para2.innerHTML = dataValue;
+    
+
+
+                                                                                                                    
   });
 
 };
@@ -60,7 +74,7 @@ named.addEventListener("keyup", function(e){
     named.style.cssText= 'outline:2px solid red';
   }
 
-// update it in the ui
+// update it in the ui   /\B(?<!\.\d*)(?=(\d{3})+.(?!\d))/g, ' '
 cardName.innerHTML = dataValue.toUpperCase(); ;
 
 
@@ -70,16 +84,16 @@ cardName.innerHTML = dataValue.toUpperCase(); ;
 number.addEventListener("keyup", function(e){
       var dataValueNumber = e.target.value;
 //     console.log(dataOne);
-       var numberRGEX = /^[0-9]+$/;
+       var numberRGEX = /^[0-9]/gi;
        var numberResult = numberRGEX.test(dataValueNumber);
-       if (numberResult){
+       if (numberResult ){
       
           console.log(numberResult);
-          
-          var newValue = dataValueNumber.replace(/\B(?<!\.\d*)(?=(\d{3})+.(?!\d))/g, ' ');
+          this.style.cssText= 'initial';          
+          var newValue = dataValueNumber.replace( /(\d{4})(\d{4})(\d{4})(\d{4})/,  "$1 $2 $3 $4" );
 
       }else{
-        named.style.cssText= 'outline:2px solid red';
+        this.style.cssText= 'outline:2px solid red';
       }
    
     // update it in the ui
