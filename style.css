@@ -260,12 +260,8 @@ form{
       
         
     
-    } */
-    #card_cvc{
-        /* background-color: red; */
-        margin-bottom: 26px;
-        align-items: baseline;
-    }
+    } 
+    
     .card_01, .card_02{
         width: 70vw;
 
@@ -274,7 +270,11 @@ form{
         justify-content: center;
         align-items: center;;
     }
-        
+    #card_cvc{
+        margin-bottom: 26px;
+    }
+    
+    
     #card_number{
         /* width: 100%; */
         /* background-color: red; */
